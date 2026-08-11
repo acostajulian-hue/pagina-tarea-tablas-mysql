@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Ventas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🏪 Sistema de Ventas</h1>
+        <nav>
+            <button onclick="mostrarSeccion('clientes')">Clientes</button>
+            <button onclick="mostrarSeccion('productos')">Productos</button>
+            <button onclick="mostrarSeccion('ventas')">Ventas</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN CLIENTES -->
+        <section id="clientes" class="seccion activa">
+            <h2>👤 Gestión de Clientes</h2>
+            <div class="formulario">
+                <h3>Agregar Cliente</h3>
+                <form id="formCliente">
+                    <input type="text" id="cliId" placeholder="ID (ej: C001)" required>
+                    <input type="text" id="cliNombre" placeholder="Nombre" required>
+                    <input type="text" id="cliDireccion" placeholder="Dirección" required>
+                    <input type="text" id="cliTelefono" placeholder="Teléfono (opcional)">
+                    <input type="text" id="cliCiudad" placeholder="Ciudad" required>
+                    <button type="submit">Agregar Cliente</button>
+                </form>
+            </div>
+            <div class="tabla-container">
+                <h3>Lista de Clientes</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Dirección</th>
+                            <th>Teléfono</th>
+                            <th>Ciudad</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaClientes">
+                        <!-- Datos cargados con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PRODUCTOS -->
+        <section id="productos" class="seccion">
+            <h2>📦 Gestión de Productos</h2>
+            <div class="formulario">
+                <h3>Agregar Producto</h3>
+                <form id="formProducto">
+                    <input type="text" id="prodId" placeholder="ID (ej: P001)" required>
+                    <input type="text" id="prodNombre" placeholder="Nombre" required>
+                    <input type="text" id="prodDescripcion" placeholder="Descripción" required>
+                    <input type="number" id="prodPrecio" placeholder="Precio" required step="0.01">
+                    <button type="submit">Agregar Producto</button>
+                </form>
+            </div>
+            <div class="tabla-container">
+                <h3>Lista de Productos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaProductos">
+                        <!-- Datos cargados con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN VENTAS -->
+        <section id="ventas" class="seccion">
+            <h2>🧾 Gestión de Ventas</h2>
+            <div class="formulario">
+                <h3>Registrar Venta</h3>
+                <form id="formVenta">
+                    <input type="text" id="ventaId" placeholder="ID (ej: V001)" required>
+                    <input type="number" id="ventaCantidad" placeholder="Cantidad" required min="1">
+                    <input type="text" id="ventaCliente" placeholder="ID Cliente (ej: C001)" required>
+                    <input type="text" id="ventaProducto" placeholder="ID Producto (ej: P001)" required>
+                    <button type="submit">Registrar Venta</button>
+                </form>
+            </div>
+            <div class="tabla-container">
+                <h3>Lista de Ventas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cantidad</th>
+                            <th>Cliente ID</th>
+                            <th>Producto ID</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaVentas">
+                        <!-- Datos cargados con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
