@@ -7,111 +7,49 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Sistema de Ventas</h1>
-        <nav>
-            <button onclick="mostrarSeccion('clientes')">Clientes</button>
-            <button onclick="mostrarSeccion('productos')">Productos</button>
-            <button onclick="mostrarSeccion('ventas')">Ventas</button>
+    <div class="container">
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="menu-principal">
+            <div class="logo">
+                <h1>🏪 Sistema Ventas</h1>
+            </div>
+            <ul class="menu-items">
+                <li><a href="index.html" class="active">📊 Inicio</a></li>
+                <li><a href="clientes.html">👤 Clientes</a></li>
+                <li><a href="productos.html">📦 Productos</a></li>
+                <li><a href="ventas.html">🧾 Ventas</a></li>
+            </ul>
         </nav>
-    </header>
 
-    <main>
-        <!-- SECCIÓN CLIENTES -->
-        <section id="clientes" class="seccion activa">
-            <h2>Gestión de Clientes</h2>
-            <div class="formulario">
-                <h3>Agregar Cliente</h3>
-                <form id="formCliente">
-                    <input type="text" id="cliId" placeholder="ID (ej: C001)" required>
-                    <input type="text" id="cliNombre" placeholder="Nombre" required>
-                    <input type="text" id="cliDireccion" placeholder="Dirección" required>
-                    <input type="text" id="cliTelefono" placeholder="Teléfono (opcional)">
-                    <input type="text" id="cliCiudad" placeholder="Ciudad" required>
-                    <button type="submit">Agregar Cliente</button>
-                </form>
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+            <div class="bienvenida">
+                <h2>¡Bienvenido al Sistema de Ventas!</h2>
+                <p>Selecciona una opción del menú para comenzar</p>
+                
+                <div class="cards-dashboard">
+                    <div class="card">
+                        <div class="card-icon">👤</div>
+                        <h3>Clientes</h3>
+                        <p>Gestión de clientes registrados</p>
+                        <a href="clientes.html" class="btn-card">Ir a Clientes →</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📦</div>
+                        <h3>Productos</h3>
+                        <p>Gestión de productos y precios</p>
+                        <a href="productos.html" class="btn-card">Ir a Productos →</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🧾</div>
+                        <h3>Ventas</h3>
+                        <p>Registro de ventas realizadas</p>
+                        <a href="ventas.html" class="btn-card">Ir a Ventas →</a>
+                    </div>
+                </div>
             </div>
-            <div class="tabla-container">
-                <h3>Lista de Clientes</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Dirección</th>
-                            <th>Teléfono</th>
-                            <th>Ciudad</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tablaClientes">
-                        <!-- Datos cargados con JavaScript -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- SECCIÓN PRODUCTOS -->
-        <section id="productos" class="seccion">
-            <h2>Gestión de Productos</h2>
-            <div class="formulario">
-                <h3>Agregar Producto</h3>
-                <form id="formProducto">
-                    <input type="text" id="prodId" placeholder="ID (ej: P001)" required>
-                    <input type="text" id="prodNombre" placeholder="Nombre" required>
-                    <input type="text" id="prodDescripcion" placeholder="Descripción" required>
-                    <input type="number" id="prodPrecio" placeholder="Precio" required step="0.01">
-                    <button type="submit">Agregar Producto</button>
-                </form>
-            </div>
-            <div class="tabla-container">
-                <h3>Lista de Productos</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Descripción</th>
-                            <th>Precio</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tablaProductos">
-                        <!-- Datos cargados con JavaScript -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- SECCIÓN VENTAS -->
-        <section id="ventas" class="seccion">
-            <h2>Gestión de Ventas</h2>
-            <div class="formulario">
-                <h3>Registrar Venta</h3>
-                <form id="formVenta">
-                    <input type="text" id="ventaId" placeholder="ID (ej: V001)" required>
-                    <input type="number" id="ventaCantidad" placeholder="Cantidad" required min="1">
-                    <input type="text" id="ventaCliente" placeholder="ID Cliente (ej: C001)" required>
-                    <input type="text" id="ventaProducto" placeholder="ID Producto (ej: P001)" required>
-                    <button type="submit">Registrar Venta</button>
-                </form>
-            </div>
-            <div class="tabla-container">
-                <h3>Lista de Ventas</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Cantidad</th>
-                            <th>Cliente ID</th>
-                            <th>Producto ID</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tablaVentas">
-                        <!-- Datos cargados con JavaScript -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
+        </main>
+    </div>
 
     <script src="app.js"></script>
 </body>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="menu-principal">
+            <div class="logo">
+                <h1>🏪 Sistema Ventas</h1>
+            </div>
+            <ul class="menu-items">
+                <li><a href="index.html">📊 Inicio</a></li>
+                <li><a href="clientes.html">👤 Clientes</a></li>
+                <li><a href="productos.html" class="active">📦 Productos</a></li>
+                <li><a href="ventas.html">🧾 Ventas</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTENIDO DE PRODUCTOS -->
+        <main class="contenido">
+            <div class="seccion-header">
+                <h2>📦 Gestión de Productos</h2>
+                <p>Administra el catálogo de productos</p>
+            </div>
+
+            <!-- FORMULARIO AGREGAR PRODUCTO -->
+            <div class="formulario">
+                <h3>➕ Agregar Nuevo Producto</h3>
+                <form id="formProducto">
+                    <div class="form-grid">
+                        <input type="text" id="prodId" placeholder="ID (ej: P001)" required>
+                        <input type="text" id="prodNombre" placeholder="Nombre" required>
+                        <input type="text" id="prodDescripcion" placeholder="Descripción" required>
+                        <input type="number" id="prodPrecio" placeholder="Precio" required step="0.01">
+                    </div>
+                    <button type="submit" class="btn-agregar">Agregar Producto</button>
+                </form>
+            </div>
+
+            <!-- TABLA DE PRODUCTOS -->
+            <div class="tabla-container">
+                <div class="tabla-header">
+                    <h3>📋 Lista de Productos</h3>
+                    <span class="contador" id="contadorProductos">0 productos</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaProductos">
+                        <!-- Datos cargados con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
