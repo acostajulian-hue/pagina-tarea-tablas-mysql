@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Ventas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="menu-principal">
+            <div class="logo">
+                <h1>🏪 Sistema Ventas</h1>
+            </div>
+            <ul class="menu-items">
+                <li><a href="index.html">📊 Inicio</a></li>
+                <li><a href="clientes.html">👤 Clientes</a></li>
+                <li><a href="productos.html">📦 Productos</a></li>
+                <li><a href="ventas.html" class="active">🧾 Ventas</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTENIDO DE VENTAS -->
+        <main class="contenido">
+            <div class="seccion-header">
+                <h2>🧾 Gestión de Ventas</h2>
+                <p>Registra y administra las ventas realizadas</p>
+            </div>
+
+            <!-- FORMULARIO REGISTRAR VENTA -->
+            <div class="formulario">
+                <h3>➕ Registrar Nueva Venta</h3>
+                <form id="formVenta">
+                    <div class="form-grid">
+                        <input type="text" id="ventaId" placeholder="ID (ej: V001)" required>
+                        <input type="number" id="ventaCantidad" placeholder="Cantidad" required min="1">
+                        <input type="text" id="ventaCliente" placeholder="ID Cliente (ej: C001)" required>
+                        <input type="text" id="ventaProducto" placeholder="ID Producto (ej: P001)" required>
+                    </div>
+                    <button type="submit" class="btn-agregar">Registrar Venta</button>
+                </form>
+            </div>
+
+            <!-- TABLA DE VENTAS -->
+            <div class="tabla-container">
+                <div class="tabla-header">
+                    <h3>📋 Lista de Ventas</h3>
+                    <span class="contador" id="contadorVentas">0 ventas</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cantidad</th>
+                            <th>Cliente ID</th>
+                            <th>Producto ID</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaVentas">
+                        <!-- Datos cargados con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
