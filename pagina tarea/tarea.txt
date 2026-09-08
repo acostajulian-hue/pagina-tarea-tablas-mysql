@@ -1,7 +1,0 @@
-cliente tiene que tener id no es auto implementable nombre dirección teléfono ciudad teléfono es el único campo que no es obligatorio
-
-id no es auto implementable nombre descripción y precio
-
-venta no -45 tiene que tener id cantidad y aplicación con las otras dos tablas
-
-lo de atrás es mysqul después hay que hacer un front con HTML y css
