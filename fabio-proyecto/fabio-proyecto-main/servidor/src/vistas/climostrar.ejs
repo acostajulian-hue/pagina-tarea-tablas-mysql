@@ -1,0 +1,59 @@
+<%
+%>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listado de Clientes</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+
+  <header>
+    <h1>Listado de Clientes</h1>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/clientes">Clientes</a>
+      <a href="/productos">Productos</a>
+      <a href="/ventas">Ventas</a>
+    </nav>
+  </header>
+
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%
+          if (registros && registros.length > 0) {
+            registros.forEach(r => {
+        %>
+          <tr>
+            <td><%= r.idclientes %></td>
+            <td><%= r.nombre %></td>
+          </tr>
+        <%
+            });
+          } else {
+        %>
+          <tr>
+            <td colspan="2">No hay clientes cargados</td>
+          </tr>
+        <%
+          }
+        %>
+      </tbody>
+    </table>
+
+    <p><a href="/clientes">Volver al menú</a></p>
+  </main>
+
+</body>
+</html>
+<%
+%>

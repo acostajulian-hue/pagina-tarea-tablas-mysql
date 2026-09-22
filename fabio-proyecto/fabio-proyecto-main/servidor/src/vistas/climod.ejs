@@ -1,0 +1,52 @@
+<%
+%>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modificar Cliente</title>
+  <link rel="stylesheet" href="C:\Users\Julian\Desktop\fabio-proyecto\fabio-proyecto-main\servidor\src\public\css\estilos.css">
+</head>
+<body>
+
+  <header>
+    <h1>Modificar Cliente</h1>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/clientes">Clientes</a>
+    </nav>
+  </header>
+
+  <main>
+    <form action="/cliente/climod" method="POST">
+      <label>ID del cliente:
+        <input type="number" name="idclientes" required>
+      </label>
+
+      <label>Nuevo nombre:
+        <input type="text" name="nombre">
+      </label>
+
+      <label>Nuevo apellido:
+        <input type="text" name="apellido">
+      </label>
+
+      <label>Nuevo teléfono:
+        <input type="text" name="telefono">
+      </label>
+
+      <label>Nuevo email:
+        <input type="email" name="email">
+      </label>
+
+      <button type="submit">Actualizar</button>
+    </form>
+
+    <p><a href="/clientes">Volver al menú</a></p>
+  </main>
+
+</body>
+</html>
+<%
+%>
